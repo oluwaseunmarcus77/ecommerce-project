@@ -10,10 +10,10 @@ Open your terminal and navigate to the directory where you saved the code.
 
 Run the following command:
 
-bash
-Copy code
-npm run dev
+"npm run dev"
+
 Accessing the Development Server:
+
 After starting the development server, you can access it through your browser:
 
 Open http://localhost:3000 to view the main application.
