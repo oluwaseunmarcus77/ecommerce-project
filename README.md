@@ -2,58 +2,49 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-## First, run the development server:
+To initiate the development server, follow these steps:
 
-```bash
+Save the code to your local machine.
+
+Open your terminal and navigate to the directory where you saved the code.
+
+Run the following command:
+
+bash
+Copy code
 npm run dev
-```
+Accessing the Development Server:
+After starting the development server, you can access it through your browser:
 
-In your terminal.
+Open http://localhost:3000 to view the main application.
+Navigate to http://localhost:3000/admin/dashboard to access the Admin Panel.
+Setting Up the Database:
+Follow these steps to set up the database:
 
-## Seconnd, open the development server:
+Sign up or log in to MongoDB Atlas, a cloud-based database service.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-And to view the Admin Pannel, open [http://localhost:3000/admin/dashboard] (http://localhost:3000/admin/dashboard) to view.
+Create a new project and specify its name.
 
-## Third, creating database:
+Build a new cluster within your project, choosing your preferred settings.
 
-Sign up/Login to MongoDB Atlas: If you don't have an account, sign up for MongoDB Atlas. If you already have one, log in.
+Whitelist your current IP address to allow connections from your computer.
 
-Create a New Project: Once logged in, create a new project. Give it a name that identifies your project.
+Create a database user with appropriate privileges.
 
-Create a Cluster:
+Obtain the connection string for your cluster.
 
-Inside your project, click on "Build a New Cluster".
-Choose your preferred cloud provider, region, cluster tier (e.g., shared, dedicated), and additional settings like the version of MongoDB.
-Configure your cluster settings like cluster name, cluster tier, and additional settings if necessary.
-Click on "Create Cluster" and wait for it to deploy. This might take a few minutes.
-Whitelist Your IP Address:
+Open your terminal and run npm install mongodb if you haven't already.
+Access your cluster's connection string in the MongoDB Atlas dashboard.
+Update the .env.local file in your repository with the obtained connection string.
 
-In the Security section of your cluster, click on "IP Whitelist".
-Add your current IP address to allow connections from your computer.
+Running the Application:
+Once the setup is complete, you can run the application:
 
-Create a Database User:
-
-In the Security section, click on "Database Access".
-Click on "Add New Database User" and create a username and password with appropriate privileges.
-Get Connection String:
-
-In the Clusters section, click on "Connect" for your cluster.
-Choose "Drivers".
-inside drivers, check the section 2 for how to install mongodb in your terminal then come back to Drivers after installing it.
-Copy the connection string. It should look something like this:
-mongodb+srv://<username>:<password>@<cluster>/<database>.
-
-Now go back to the Repository and look for ".env.local" directory and replace the MONGODB URI string with the connection string you copied (mongodb+srv://<username>:<password>@<cluster>/<database>) and also replace the the "username" and "password" with actual username and password in the database and save.
-
-## Fourth, run the application:
-
-You can start checking out the main web page [http://localhost:3000] by adding to cart and you can also add more products by going to the admin pannel [http://localhost:3000/admin/dashboard] (this will request a gmail account).
-In the admin pannel side bar, You will find Dashboard button. In Dashboard, You will be able to view all the products in the main web page [http://localhost:3000].
-To add more product, check the side bar for Products button and click on it, it's right under the Dashboard button.
-The Products button will show a Formlike view page, in this page you will see a button with "Choose file" on it, click on it to add a product image file from your computer file explorer or if you don't have any image files, you can get images right from this repository by checking the "Public" directory to view all the images. you can save them to your computer.
-After selecting an image, click on open in the file explorer and wait for it to load on the Product page. wait until it's fully loaded and give the product a name, category and price in the form then click on "Add" button.
-This will upload the product with name and price, You can view the dashboard in the admin pannel for result and you can also return to the main page [http://localhost:3000] and refresh to view the added product.
+Explore the main web page at [http://localhost:3000], where you can add products to the cart.
+Access the Admin Panel at [http://localhost:3000/admin/dashboard] (Gmail account required).
+In the Admin Panel, navigate to the Dashboard to view all products.
+To add new products, access the Products page and upload product images, specify details, and click "Add".
+Go to the Dashboard to view the added product and also refresh the main web page (localhost:3000) to view the update
 
 Also check the database collections for results.
 
